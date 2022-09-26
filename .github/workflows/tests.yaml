@@ -47,5 +47,5 @@ jobs:
       - name: "Safety - Dependencies CVE Check"
         run: docker run --rm api-development safety check
 
-      - name: "API UnitTests"
-        run: docker run --rm api-development pytest tests
+#      - name: "API UnitTests"
+#        run: docker run --rm api-development pytest tests

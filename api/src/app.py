@@ -1,8 +1,5 @@
-
 import click
-import emoji
 import uvicorn
-
 from fastapi import APIRouter, FastAPI, Security
 from fastapi.encoders import jsonable_encoder
 from fastapi.exceptions import RequestValidationError
@@ -15,7 +12,6 @@ from config import config
 from restful.responses import ErrorResponse
 from services.dmss import dmss_api
 from store_headers_middleware import StoreHeadersMiddleware
-
 
 prefix = "/api/v1"
 
@@ -31,7 +27,6 @@ def auth_with_jwt(jwt_token: str = Security(oauth2_scheme)):
 def create_app():
 
     from features.jobs import jobs
-
 
     public_routes = APIRouter()
     authenticated_routes = APIRouter()
@@ -64,8 +59,6 @@ def create_app():
 @click.option("--token", default="no-token", type=str)
 def cli(token: str):
     dmss_api.api_client.default_headers["Authorization"] = "Bearer " + token
-
-
 
 
 @cli.command()

@@ -53,9 +53,9 @@ repos:
       name: Python style checking
       entry: sh -c "api/.venv/bin/python -m flake8 --config=api/.flake8 api/src"
       language: system
-    - id: pytest
-      name: API Unit Tests
-      entry: sh -c "export PYTHONPATH=./api/src && api/.venv/bin/python -m pytest api/src/tests"
-      language: system
-      pass_filenames: false
+#    - id: pytest
+#      name: API Unit Tests
+#      entry: sh -c "export PYTHONPATH=./api/src && api/.venv/bin/python -m pytest api/src/tests"
+#      language: system
+#      pass_filenames: false
 

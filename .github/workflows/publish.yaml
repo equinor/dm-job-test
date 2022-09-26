@@ -7,11 +7,6 @@ on:
         default: 'latest'
         required: true
         type: string
-      oauth-redirect-url:
-        description: 'redirect url for oauth. Should be the public url to access the web app'
-        default: 'https://data-modelling-tool.app.radix.equinor.com'
-        required: true
-        type: string
     secrets:
       ACR_SECRET:
         required: false
